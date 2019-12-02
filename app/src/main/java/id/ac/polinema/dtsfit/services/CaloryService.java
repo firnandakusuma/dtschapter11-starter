@@ -14,16 +14,16 @@ public interface CaloryService {
 
     // TODO: Definisikan service getCalories()
 
-    @GET("/polinema-mobile/dts-fit/calories")
+    @GET("/firnandakusuma/dts-fit/calories")
     Call<List<Calory>> getCalories();
 
     // TODO: Definisikan service addCalory()
 
-    @POST("/polinema-mobile/dts-fit/calories")
+    @POST("/firnandakusuma/dts-fit/calories")
     Call<Calory> addCalory(@Body Calory calory);
 
     // TODO: Definisikan service editCalory()
 
-    @PUT("/polinema-mobile/dts-fit/calories/{id}")
+    @PUT("/firnandakusuma/dts-fit/calories/{id}")
     Call<Calory> editCalory(@Path("id") int id, @Body Calory calory);
 }

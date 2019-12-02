@@ -126,12 +126,12 @@ public class MainActivity extends AppCompatActivity implements
 	@Override
 	public void onCaloryClicked(Calory calory) {
         // TODO: Implementasikan aksi item calory ketika dipilih pada CaloryFragment
+		changeFragment(SaveCaloryFragment.newInstance(calory));
 	}
 
 	@Override
 	public void onSaveMenuClicked(final View view, Calory calory) {
 		// TODO: Implementasikan aksi ketika menu simpan ditekan pada SaveCaloryFragment
-		changeFragment(SaveCaloryFragment.newInstance(calory));
 		Call<Calory> caloryCall = (calory.getId() == null)
 				? caloryService.addCalory(calory)
 				: caloryService.editCalory(calory.getId(), calory);
